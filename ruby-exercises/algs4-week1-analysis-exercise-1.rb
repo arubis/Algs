@@ -1,9 +1,5 @@
 # this doesn't work.
 
-def computeB(n, time)
-  b = Math::log2(time) / Math::log2(n)
-end
-
 data = [
   [8192, 0.001],
   [16384, 0.003],
@@ -20,22 +16,38 @@ data = [
   [33554432, 494.309],
   [67108864, 1481.162]]
 
-def getPoints(source)
-  points = Array.new
-  source.each do |time, n|
-    points << computeB(time, n)
-  end
-  points
+ntimes = Array.new
+data.each do |n, time|
+  ntimes << time
+end
+ntimes.reverse!
+
+divs = Array.new
+
+for i in 0...(ntimes.length-1)
+  divs << ( ntimes[i] / ntimes[i+1] )
+
 end
 
-puts getPoints(data).inspect
+puts divs.inspect
 
-delta = Array.new
+# def getPoints(source)
+#   points = Array.new
+#   source.each do |time, n|
+#     points << computeB(time, n)
+#   end
+#   points
+# end
 
-getPoints(data).each_with_index do |point, index|
-  delta[index] = point
-  delta[index - 1] -= delta[index]
-  delta
-end
+# puts getPoints(data).inspect
 
-puts delta.inspect
+# delta = Array.new
+
+# getPoints(data).each_with_index do |point, index|
+#   delta[index] = point
+#   delta[index - 1] -= delta[index]
+#   delta
+# end
+
+# puts delta.inspect
+
