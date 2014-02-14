@@ -1,0 +1,1000 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"sidebar",
+				"register_sidebar_widget"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"have_",
+				"have_posts"
+			],
+			[
+				"if",
+				"ifelse	if … else …"
+			],
+			[
+				"ready",
+				"ready	$(document).ready"
+			],
+			[
+				"slide",
+				"slideToggle	.slideToggle()"
+			],
+			[
+				"knob-",
+				"knob-center"
+			],
+			[
+				"toggle",
+				"toggleColumn"
+			],
+			[
+				"fade",
+				"fadeOut	.fadeOut()"
+			],
+			[
+				"css",
+				"css	.css() - single"
+			],
+			[
+				"rady",
+				"ready	$(document).ready"
+			],
+			[
+				"click",
+				"click_button"
+			],
+			[
+				"edit",
+				"edit_user_path"
+			],
+			[
+				"before",
+				"before_action"
+			],
+			[
+				"bef",
+				"before"
+			],
+			[
+				"sign",
+				"sign_in"
+			],
+			[
+				"wrong",
+				"wrong_user"
+			],
+			[
+				"cli",
+				"click_button"
+			],
+			[
+				"up",
+				"Up"
+			],
+			[
+				"U",
+				"User"
+			],
+			[
+				"su",
+				"submit"
+			],
+			[
+				"exp",
+				"exp	expect(subject).to something"
+			],
+			[
+				"mixed",
+				"mixed_case_email"
+			],
+			[
+				"password",
+				"password_confirmation"
+			],
+			[
+				"user_",
+				"user_with_same_email"
+			],
+			[
+				"shou",
+				"should_not"
+			],
+			[
+				"fl",
+				"fl:r	float:right"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"inf",
+				"infer_base_class_for_anonymous_controllers"
+			],
+			[
+				"get_sty",
+				"get_stylesheet_directory_uri"
+			],
+			[
+				"input",
+				"input	input - hidden"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"u",
+				"uppercase"
+			],
+			[
+				"priority",
+				"priority-HEAD"
+			],
+			[
+				"in",
+				"include"
+			],
+			[
+				"font-",
+				"font-weight"
+			],
+			[
+				"who",
+				"who"
+			],
+			[
+				"hei",
+				"min-height"
+			],
+			[
+				"a",
+				"a	<a>"
+			],
+			[
+				"link",
+				"link	link - stylesheet"
+			],
+			[
+				"label",
+				"label	<label>"
+			],
+			[
+				"From",
+				"FromCountry"
+			],
+			[
+				"REDIS",
+				"REDIS"
+			],
+			[
+				"account",
+				"account_sid"
+			],
+			[
+				"sm",
+				"small-caps"
+			],
+			[
+				"ma",
+				"mah	max-height"
+			],
+			[
+				"color_",
+				"color_cheap"
+			],
+			[
+				"col",
+				"color_cheap"
+			],
+			[
+				"pos",
+				"pos:r	position:relative"
+			],
+			[
+				"ha",
+				"have_selector"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "lecture-11-quiz.rb",
+			"settings":
+			{
+				"buffer_size": 607,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/JSLint/JSLint.sublime-build",
+	"command_palette":
+	{
+		"height": 27.0,
+		"selected_items":
+		[
+			[
+				"p inst",
+				"Package Control: Install Package"
+			],
+			[
+				"gith pre",
+				"GitHub Flavored Markdown: Preview"
+			],
+			[
+				"preview",
+				"GitHub Flavored Markdown: Preview"
+			],
+			[
+				"markdown",
+				"GitHub Flavored Markdown: Preview"
+			],
+			[
+				"markd",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"lint",
+				"JSLint"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"git pull",
+				"Git: Pull"
+			],
+			[
+				"p upg",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"tidy",
+				"Tidy HTML"
+			],
+			[
+				"g push",
+				"Git: Push Current Branch"
+			],
+			[
+				"tid",
+				"Tidy HTML"
+			],
+			[
+				"g st",
+				"Git: Status"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"p upgr",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				" pu",
+				"Git: Push"
+			],
+			[
+				"g stat",
+				"Git: Status"
+			],
+			[
+				"g comm",
+				"Git: Quick Commit Current File"
+			],
+			[
+				"p updg",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"p upgrade",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"gstat",
+				"Git: Status"
+			],
+			[
+				"quick comm",
+				"Git: Quick Commit"
+			],
+			[
+				"quic ",
+				"Git: Quick Commit"
+			],
+			[
+				"quick co",
+				"Git: Quick Commit"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"git st",
+				"Git: Add Signed Tag"
+			],
+			[
+				"git add",
+				"Git: Add Current File"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"git q",
+				"Git: Quick Commit"
+			],
+			[
+				"comm",
+				"Git: Quick Commit"
+			],
+			[
+				"gc",
+				"Git: Commit"
+			],
+			[
+				"ga",
+				"Git: Add Current File"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"gst",
+				"Git: Status"
+			],
+			[
+				"stats",
+				"Git: Status"
+			],
+			[
+				"commit",
+				"Git: Commit"
+			],
+			[
+				"diff",
+				"Modific: Show diff"
+			],
+			[
+				"gqa",
+				"Git: Quick Add"
+			],
+			[
+				"gqcc",
+				"Git: Quick Commit Current File"
+			],
+			[
+				"git com",
+				"Git: Quick Commit Current File"
+			],
+			[
+				"p rm",
+				"Package Control: Remove Package"
+			],
+			[
+				"p int",
+				"Package Control: Install Package"
+			],
+			[
+				"p rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"scss",
+				"Set Syntax: SCSS"
+			],
+			[
+				"comme",
+				"Toggle Comment"
+			],
+			[
+				"comment",
+				"Toggle Block Comment"
+			],
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"todo",
+				"Set Syntax: Todo"
+			],
+			[
+				"i pack",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"upd",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"pack",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"mark",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"pack:",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"Pack",
+				"Package Control: List Packages"
+			],
+			[
+				"Package",
+				"Package Control: Upgrade Package"
+			]
+		],
+		"width": 458.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/arubis/dev/cleanwebOne-theme/functions.php",
+		"/Users/arubis/dev/cleanwebOne-theme/footer.php",
+		"/Users/arubis/dev/cleanwebOne-theme/header.php",
+		"/Users/arubis/dev/cleanwebOne-theme/README.md",
+		"/Users/arubis/dev/cleanwebOne-theme/_haml/live.html.haml.html",
+		"/Users/arubis/dev/cleanwebOne-theme/_haml/live.html.haml",
+		"/Users/arubis/dev/cleanwebOne-theme/_sass/_page.scss",
+		"/Users/arubis/dev/cleanwebOne-theme/_haml/resources.html.haml",
+		"/Users/arubis/dev/cleanwebOne-theme/_haml/datasets.html.haml",
+		"/Users/arubis/dev/cleanwebOne-theme/_haml/datasets.html.haml.html",
+		"/Users/arubis/dev/cleanwebOne-theme/_haml/apis.html.haml.html",
+		"/Users/arubis/dev/cleanwebOne-theme/_haml/_sponsors.html.haml.html",
+		"/Users/arubis/dev/cleanwebOne-theme/_haml/start-a-community.html.haml",
+		"/Users/arubis/dev/cleanwebOne-theme/_haml/sponsor.html.haml",
+		"/Users/arubis/dev/cleanwebOne-theme/_haml/apis.html.haml",
+		"/Users/arubis/dev/cleanwebOne-theme/_haml/communities.html.haml",
+		"/Users/arubis/dev/cleanwebOne-theme/_haml/join.html.haml",
+		"/Users/arubis/dev/cleanwebOne-theme/_sass/_post.scss",
+		"/Users/arubis/dev/cleanwebOne-theme/index.php",
+		"/Users/arubis/dev/cleanwebOne-theme/sidebar.php",
+		"/Users/arubis/dev/cleanwebOne-theme/_sass/_wp_widget_styles.scss",
+		"/Users/arubis/dev/cleanwebOne-theme/_sass/style.scss",
+		"/Users/arubis/dev/cleanwebOne-theme/front-page.php",
+		"/Users/arubis/dev/cleanwebOne-theme/_haml/about.html.haml",
+		"/Users/arubis/dev/cleanwebOne-theme/TODO",
+		"/Users/arubis/dev/cleanwebOne-theme/_haml/join.html.haml.html",
+		"/Users/arubis/dev/cleanwebOne-theme/_haml/communities.html.haml.html",
+		"/Users/arubis/dev/cleanwebOne-theme/_haml/about.html.haml.html",
+		"/Users/arubis/dev/cleanwebOne-theme/page.php",
+		"/Users/arubis/dev/cleanwebOne-theme/_sass/_landing-frame.scss",
+		"/Users/arubis/dev/cleanwebOne-theme/js/jquery.whos-who-mosaic-tweak.js",
+		"/Users/arubis/dev/cleanwebOne-theme/js/jquery.rotate-knobs.js",
+		"/Users/arubis/dev/cleanwebOne-theme/_sass/_who-frame_img-grid.scss",
+		"/Users/arubis/dev/cleanwebOne-theme/_sass/_how-frame.scss",
+		"/Users/arubis/dev/cleanwebOne-theme/js/jquery.pullquotes.js",
+		"/Users/arubis/dev/rails-tutorial/sample_app/app/helpers/sessions_helper.rb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/app/views/layouts/_header.html.haml",
+		"/Users/arubis/dev/rails-tutorial/sample_app/spec/requests/authentication_pages_spec.rb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/app/views/users/edit.html.haml",
+		"/Users/arubis/dev/rails-tutorial/sample_app/app/controllers/users_controller.rb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/spec/requests/user_pages_spec.rb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/spec/support/utilities.rb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/app/controllers/sessions_controller.rb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/app/views/sessions/new.html.haml",
+		"/Users/arubis/dev/rails-tutorial/sample_app/Gemfile",
+		"/Users/arubis/dev/rails-tutorial/sample_app/app/assets/stylesheets/custom.css.scss",
+		"/Users/arubis/dev/rails-tutorial/sample_app/app/views/users/new.html.erb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/.project",
+		"/Users/arubis/dev/rails-tutorial/sample_app/app/views/users/show.html.erb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/app/views/layouts/_header.html.erb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/app/views/layouts/application.html.erb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/app/helpers/users_helper.rb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/config/environments/test.rb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/app/controllers/application_controller.rb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/config/routes.rb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/app/models/user.rb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/spec/models/user_spec.rb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/app/views/layouts/_footer.html.erb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/spec/requests/static_pages_spec.rb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/db/migrate/20131116043148_add_index_to_users_email.rb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/db/schema.rb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/spec/helpers/application_helper_spec.rb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/app/views/static_pages/contact.html.erb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/app/views/static_pages/home.html.erb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/app/controllers/static_pages_controller.rb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/app/helpers/application_helper.rb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/app/views/layouts/_shim.html.erb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/config/application.rb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/config/database.yml",
+		"/Users/arubis/dev/rails-tutorial/sample_app/app/views/static_pages/help.html.erb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/app/views/static_pages/about.html.erb",
+		"/Users/arubis/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/arubis/Library/Application Support/Sublime Text 2/Packages/User/HTML (Rails).sublime-settings",
+		"/Users/arubis/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/arubis/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/arubis/Library/Application Support/Sublime Text 2/Packages/User/RubyTest.sublime-settings",
+		"/Users/arubis/dev/rails-tutorial/sample_app/spec/spec_helper.rb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/Guardfile",
+		"/Users/arubis/dev/rails-tutorial/sample_app/README.md",
+		"/Users/arubis/dev/rails-tutorial/sample_app/config/initializers/secret_token.rb",
+		"/Users/arubis/dev/rails-tutorial/sample_app/.gitignore",
+		"/Users/arubis/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/arubis/dev/arubis.github.io/_posts/2013-11-02-Slippin-Into-The-Future.markdown",
+		"/Users/arubis/dev/Cleanweb-website/wp-includes/functions.php",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/cleanwebOne.sublime-project",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/header.php",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/config.rb",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/_sass/style.scss",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/.gitignore",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/_sass/_subnav.scss",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/_sass/_navbar.scss",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/functions.php",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/_sass/_who-frame.scss",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/_sass/_landing-frame.scss",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/_sass/_how-frame.scss",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/index.html",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/js/communities-map.js",
+		"/Users/arubis/Library/Application Support/Sublime Text 2/Packages/Modific/README.md",
+		"/Users/arubis/Library/Application Support/Sublime Text 2/Packages/User/SublimeGit.sublime-settings",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/_sass/_where-frame.scss",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/_sass/_social-frame.scss",
+		"/Users/arubis/Library/Application Support/Sublime Text 2/Packages/User/WakaTime.sublime-settings",
+		"/Users/arubis/Library/Application Support/Sublime Text 2/Packages/WakaTime/WakaTime.sublime-settings",
+		"/Users/arubis/Library/Application Support/Sublime Text 2/Packages/SublimeGit/SublimeGit.sublime-settings",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/_sass/_what-frame.scss",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/immersedcleanweb/template-communities.php",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/_footer-frame.scss",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/style.scss",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/TODO",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/_landing-frame.scss",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/style.css",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/_subnav.scss",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/_sponsors-frame.scss",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/_who-frame.scss",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/_what-frame.scss",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/_how-frame.scss",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/README.md",
+		"/Users/arubis/Library/Application Support/Sublime Text 2/Packages/HtmlTidy/HtmlTidy.sublime-settings",
+		"/Users/arubis/Library/Application Support/Sublime Text 2/Packages/User/HtmlTidy.sublime-settings",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/_navbar.scss",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/_events-frame.scss",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/_sell-frame.scss",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/_social-frame.scss",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/_where-frame.scss",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/cleanwebOne.sublime-workspace",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/_footer.scss",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/sass/how-frame.scss",
+		"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/index.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Users/arubis/dev/Cleanweb-website/wp-content/themes/cleanwebOne/_sass",
+			"<open folders>",
+			"/Users/arubis/dev/liter_of_light/",
+			"/Users/arubis/dev/liter_of_light/views",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"map",
+			"leaflet",
+			".js",
+			"allowfullscreen: 'yes'",
+			"embed?v=",
+			"height: \"315\",                                      |\n            width: \"420\",                                       |",
+			"            height: \"315\",                                      |\n            width: \"420\",                                       |",
+			"src: \"www",
+			"http://",
+			"_new",
+			"charset=",
+			"script",
+			":width => \"99\"",
+			":height => \"99\", ",
+			".row",
+			"Name2",
+			".alignleft.size-full.border",
+			"?&gt;",
+			"&lt;?php",
+			":width => \"99\"",
+			":height => \"99\", ",
+			"about-",
+			".alignleft.size-full.border",
+			"text-trans",
+			"h3",
+			"rotation",
+			"#fff",
+			"eaeaea",
+			"lightGray",
+			"#999",
+			"nav",
+			" 50",
+			"151",
+			"img/clean",
+			"b+w",
+			"https",
+			".js",
+			"map",
+			"img",
+			"img src=\"",
+			"img",
+			"https://cleanweb.grouptie.com",
+			"Join Now",
+			"/sponsors",
+			"Black",
+			"osm",
+			"img",
+			"nav",
+			"subnav-wr",
+			"center",
+			"frame-head",
+			"thatch",
+			"crossthatch",
+			"hover",
+			"white",
+			"font-weight",
+			"color",
+			"class=\"bwWrapper\"",
+			"lineheight",
+			"sell",
+			"what",
+			"wha",
+			"<div class=\"col-sm-2 col-sm-3 col-xs-6\">",
+			"section",
+			"frame",
+			"section",
+			"landing",
+			"navheight",
+			"footer",
+			"social",
+			"where",
+			"events",
+			"who",
+			"sell",
+			"what",
+			"url",
+			"how",
+			".knob ",
+			"knob",
+			"centered",
+			"50px",
+			"knob",
+			"spinner",
+			"how",
+			"#how",
+			"text",
+			"50px",
+			"logo",
+			"col-sm-8 col-sm-push-2",
+			"#what",
+			".panel",
+			"size",
+			"landing",
+			"h1",
+			"font-family",
+			"center",
+			"100px",
+			"centered",
+			"padding",
+			"padding-left",
+			"padding-l",
+			"h1",
+			"frame",
+			"at <span",
+			"main nav",
+			"100",
+			"hover",
+			"nav",
+			"<nav",
+			"100px",
+			"text-align",
+			"footer",
+			"img",
+			"sponsors",
+			"sponsor",
+			"#who",
+			"cleanweb ",
+			"where",
+			"20px",
+			"h2",
+			"<br />",
+			"what-sub",
+			"panel",
+			"#what-",
+			"#what ",
+			"accent",
+			"center",
+			"h1"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"<!",
+			"frame"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "lecture-11-quiz.rb",
+					"settings":
+					{
+						"buffer_size": 607,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								543,
+								543
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"incomplete_sync": null,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 52.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 25.0
+	},
+	"output.git":
+	{
+		"height": 98.0
+	},
+	"output.git-commit":
+	{
+		"height": 100.0
+	},
+	"output.git-pull":
+	{
+		"height": 100.0
+	},
+	"output.git-push":
+	{
+		"height": 100.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 251.0,
+	"status_bar_visible": true
+}
