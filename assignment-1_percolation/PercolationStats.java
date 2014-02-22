@@ -2,7 +2,9 @@
 
 public class PercolationStats {
    public PercolationStats(int N, int T) {  // perform T independent computational experiments on an N-by-N grid
-   
+       // first get all pissy
+       if ( N <= 0 ) throw new IllegalArgumentException("Gotta getta grid");
+       if ( T <= 0 ) throw new IllegalArgumentException("If you don't wanna test get outta here!");
    }
    
    public double mean()  {                  // sample mean of percolation threshold
