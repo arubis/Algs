@@ -3,6 +3,7 @@
 public class PercolationStats {
     int[] opened;
     int total_opened;
+    double[] percThreshold;
     int N, T;
     
     public PercolationStats(int n, int t) {  // perform T independent computational experiments on an N-by-N grid
@@ -15,7 +16,8 @@ public class PercolationStats {
         
         // then let's decide how to share
         opened = new int[T];
-        total_opened = 0;
+        percThreshold = new double[T];
+        
         int i;
         Percolation p;
         
@@ -30,15 +32,17 @@ public class PercolationStats {
                 col = StdRandom.uniform(N) + 1;
                 if (!p.isOpen(row, col)) {
                     p.open(row, col);
-                    opened[i]++; total_opened++;
+                    opened[i]++;
                 }
             }
+            
+            percThreshold[i] = (double) opened[i] / (N*N);
         }
     }
    
     public double mean()  {                  // sample mean of percolation threshold
-        double per_perc = (double) N * N;
-        return StdStats.mean(opened)/(per_perc);
+        // double per_perc = (double) N * N;
+        return StdStats.mean(percThreshold);
     }
    
     public double stddev() {                 // sample standard deviation of percolation threshold
@@ -60,7 +64,7 @@ public class PercolationStats {
         PercolationStats stats;
         stats = new PercolationStats(n, t);
         
-        StdOut.printf("mean                    = %.17f\n", stats.mean());
+        StdOut.printf("mean                    = %f\n", stats.mean());
         StdOut.printf("stddev                  = %f\n", stats.stddev());
         StdOut.printf("95 %% confidence interval = %f, %f\n",
                       stats.confidenceLo(), stats.confidenceHi());
