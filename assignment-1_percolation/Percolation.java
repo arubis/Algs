@@ -25,6 +25,7 @@ public class Percolation {
         for (i = 0; i < N; i++) {  // give each site a unique root in uf
             for (j = 0; j < N; j++) {
                 grid[i][j] = cnt++;
+                /* let's do this in open()
                 if (i == 1) { // virtual top
                     uf.union(top, grid[i][j]);
                     perc.union(top, grid[i][j]);
@@ -32,6 +33,7 @@ public class Percolation {
                 if (i == N-1) {
                     perc.union(bottom, grid[i][j]); // virtual bottom
                 }
+                */
                 openState[i][j] = false;          // each site starts closed
             }
         }
@@ -73,7 +75,7 @@ public class Percolation {
             }
             
             // and if this is a bottom site, connect it to the virt bottom
-            if (i == N) { perc.union(bottom, grid[i][j]); }
+            if (i == N-1) { perc.union(bottom, grid[i][j]); }
         }
     }
     
@@ -118,6 +120,10 @@ public class Percolation {
         if (something.isFull(1, 1)) { StdOut.println("YES HOW TERRIBLE"); return; }
         else { StdOut.println("Nope, keep on looking");
         }
+        
+        StdOut.print("Does the system percolate? ");
+        StdOut.println(something.percolates());
+
         
         // connect a few nodes
         i = 3;
