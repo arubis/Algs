@@ -3,38 +3,77 @@
 
 public class Percolation {
     private WeightedQuickUnionUF uf;
+    private WeightedQuickUnionUF perc;
     private int[][] grid;
     private boolean[][] openState;
     private int N;
+    private int top;
+    private int bottom;
+    
         
     public Percolation(int size) { // create N-by-N grid, with all sites blocked
         N = size+1;
-        uf = new WeightedQuickUnionUF(N*N);
-        grid = new int[N][N];
+        uf = new WeightedQuickUnionUF(N*N+2);
+        perc = new WeightedQuickUnionUF(N*N+2);
+        grid = new int[N][N+1];    // some extra room in there for virtual sites
         openState = new boolean[N][N];
         int i, j;
         
-        int cnt = 0;
+        top = 0;
+        bottom = 1;
+        int cnt = 2;
         for (i = 0; i < N; i++) {  // give each site a unique root in uf
             for (j = 0; j < N; j++) {
-                grid[i][j] = cnt++;      // here's our unique root
-                openState[i][j] = false; // each site starts closed
+                grid[i][j] = cnt++;
+                if (i == 1) { // virtual top
+                    uf.union(top, grid[i][j]);
+                    perc.union(top, grid[i][j]);
+                } 
+                if (i == N-1) {
+                    perc.union(bottom, grid[i][j]); // virtual bottom
+                }
+                openState[i][j] = false;          // each site starts closed
             }
-        }        
+        }
     }
     
     public void open(int i, int j) {      // open site (row i, column j) if it 
                               // is not already -- appallingly we want 1<=i<=N
+        if (i <= 0 || i > N) throw 
+            new IndexOutOfBoundsException("row index i out of bounds");
+        if (j <= 0 || j > N) throw 
+            new IndexOutOfBoundsException("col index j out of bounds");
         
         if (!isOpen(i, j)) {
             
             openState[i][j] = true;       // first, open the site itself
 
             // now, connect to any adjacent open sites
-            if (i < N-1 && isOpen(i+1, j)) { uf.union(grid[i+1][j], grid[i][j]); }
-            if (i > 1 && isOpen(i-1, j)) { uf.union(grid[i-1][j], grid[i][j]); }
-            if (j < N-1 && isOpen(i, j+1)) { uf.union(grid[i][j+1], grid[i][j]); }
-            if (j > 1 && isOpen(i, j-1)) { uf.union(grid[i][j-1], grid[i][j]); }
+            if (i < N-1 && isOpen(i+1, j)) {
+                uf.union(grid[i+1][j], grid[i][j]);
+                perc.union(grid[i+1][j], grid[i][j]);
+            }
+            if (i > 1 && isOpen(i-1, j)) {
+                uf.union(grid[i-1][j], grid[i][j]);
+                perc.union(grid[i-1][j], grid[i][j]);
+            }
+            if (j < N-1 && isOpen(i, j+1)) {
+                uf.union(grid[i][j+1], grid[i][j]);
+                perc.union(grid[i][j+1], grid[i][j]);
+            }
+            if (j > 1 && isOpen(i, j-1)) {
+                uf.union(grid[i][j-1], grid[i][j]);
+                perc.union(grid[i][j-1], grid[i][j]);
+            }
+            
+            // and if this is a top site, connect it to the virt tops
+            if (i == 1) { 
+                uf.union(top, grid[i][j]);
+                perc.union(top, grid[i][j]);
+            }
+            
+            // and if this is a bottom site, connect it to the virt bottom
+            if (i == N) { perc.union(bottom, grid[i][j]); }
         }
     }
     
@@ -48,23 +87,18 @@ public class Percolation {
     }
     
     public boolean isFull(int i, int j) { // is site (row i, column j) full?
-        int counter;
-        // site i, j is full if it is in union with site (i=0, j) for any j.
-        if (i == 1) { return true; } // trivial case
-        for (counter = 1; counter < N; counter++) {
-            if (uf.connected(grid[1][counter], grid[i][j])) { return true; }
-        } 
-        return false;
+        if (i <= 0 || i > N) throw 
+            new IndexOutOfBoundsException("row index i out of bounds");
+        if (j <= 0 || j > N) throw 
+            new IndexOutOfBoundsException("col index j out of bounds");
+        
+        // site i, j is full if it is in union with the virtual top.
+        if (!isOpen(i, j)) { return false; } // can't be full if it's closed
+        return uf.connected(top, grid[i][j]);
     }
     
     public boolean percolates() {         // does the system percolate?
-        int bottom;
-        
-        for (bottom = 1; bottom < N; bottom++) {
-            if (isFull(N-1, bottom)) { return true; }
-        }
-        
-        return false;
+        return perc.connected(top, bottom);
     }
     
     public static void main(String[] args) {
@@ -74,11 +108,16 @@ public class Percolation {
         if (args.length > 0) {
             gridSize = Integer.parseInt(args[0]);
         } else {
-            gridSize = 7;
+            gridSize = 10;
         }
         
         Percolation something;
         something = new Percolation(gridSize);
+        
+        StdOut.printf("Just as a check, is node [%d][%d] full? ", 1, 1);
+        if (something.isFull(1, 1)) { StdOut.println("YES HOW TERRIBLE"); return; }
+        else { StdOut.println("Nope, keep on looking");
+        }
         
         // connect a few nodes
         i = 3;
@@ -92,7 +131,9 @@ public class Percolation {
             if (something.isOpen(i, j)) { StdOut.println("Yes!"); }
             else { StdOut.println("No, something is wrong with my code."); }
         }
+        
         j++;
+        
         StdOut.printf("If we open adjacent node [%d][%d], "
                           + "then they should be connected.\n", i, j);
         StdOut.printf("With [%d][%d] (%d) still closed, "
@@ -149,11 +190,12 @@ public class Percolation {
         
         StdOut.printf("What if we connect manually to the bottom?\n");
         for (count = j; count < something.N; count++) {
-            // StdOut.printf("Open [%d, %d] :: ", count, j);
+            StdOut.printf("Open [%d, %d] :: ", count, j);
             something.open(count, j);
         }
         
         StdOut.print("Does the system percolate? ");
         StdOut.println(something.percolates());
+        
     }
 }
