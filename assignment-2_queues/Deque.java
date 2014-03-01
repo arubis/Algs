@@ -8,15 +8,15 @@ public class Deque<Item> implements Iterable<Item> {
     Node prior;
   }
 
-  private Node head;        // head node in LL
-  private Node tail;        // tail node in LL
-  private int N;            // size of LL
+  private Node head = null;        // head node in LL
+  private Node tail = null;        // tail node in LL
+  private int N = 0;               // size of LL
 
-  public Deque()  // construct an empty deque
+  public Deque()  // construct an empty deque (but do we even need to?)
   {
-    head = new Node();
-    tail = new Node();    // will repoint 'tail' later -- does this work???
-    N = 0;                // size of LL is 0 (and head.item s.b. null)
+    // head = new Node();
+    // tail = new Node();    // will repoint 'tail' later -- does this work???
+    // N = 0;                // size of LL is 0 (and head.item s.b. null)
   }
 
   public boolean isEmpty()               { return N == 0; }  // is the deque empty?
@@ -27,13 +27,24 @@ public class Deque<Item> implements Iterable<Item> {
     // be careful/complain
     if ( item == null ) { throw new NullPointerException("Can't add a null to deque"); }
 
+    if ( head != null ) 
+    { StdOut.printf("Current head is %s containing '%s'. Adding '%s'...", head.toString(), head.item, item); }
+    else { StdOut.printf("Current head is null; adding '%s'...", item); }
+
     Node oldhead = head;                // save our place
 
     head = new Node();                   // new node for our data
     head.item = item;
-    head.next = oldhead;                // keep linked list linked in order
-    head.next.prior = head;             // my, isn't that pretty
+    head.next = oldhead;                    // keep linked list linked in order
+    if (head.next != null) { 
+      StdOut.printf("(Linking %s.prior to head(%s)", head.next.toString(), head.toString());
+      head.next.prior = head; 
+    }
+    if (oldhead == null) { tail = head; StdOut.printf("(Linking 'tail' to %s) ", tail.toString()); }   // if we just started from scratch, link up 'last'
+
     N++;                                  // keep track of list size
+
+    StdOut.printf("\nHead is %s (%s) and Tail is %s (%s) \n\n", head.toString(), head.item, tail.toString(), tail.item);
   }
 
   public void addLast(Item item)          // insert the item at the end
@@ -41,13 +52,26 @@ public class Deque<Item> implements Iterable<Item> {
     // be careful/complain
     if ( item == null ) { throw new NullPointerException("Can't add a null to deque"); }
 
+    if ( tail != null )
+    { StdOut.printf("Current tail is %s containing '%s'. Adding '%s'...", tail.toString(), tail.item, item); }
+    else { StdOut.printf("Current tail is null; adding '%s'...", item); }
+
     Node oldtail = tail;                  // we'll need to link up, save our place
 
     tail = new Node();                    // new node for our data
     tail.item = item;
-    oldtail.next = tail;                  // keep linked list linked in order
     tail.prior = oldtail;                 // double link
+
+    if (tail.prior != null) { 
+      StdOut.printf("(Linking %s.next to tail(%s)", tail.prior.toString(), tail.toString());
+      tail.prior.next = tail; 
+    }
+    if (oldtail == null) { head = tail; StdOut.printf("(Linking 'head' to %s) ", head.toString()); }   // if we just started from scratch, link up 'head'
+
     N++;                                  // keep track of list size
+
+    StdOut.printf("\nHead is %s (%s) and Tail is %s (%s) \n\n", head.toString(), head.item, tail.toString(), tail.item);
+
   }
 
   // public Item removeFirst()              { return ; }  // delete and return the item at the front
@@ -58,7 +82,7 @@ public class Deque<Item> implements Iterable<Item> {
   private class ForwardLLIterator implements Iterator<Item>
   {
     private Node current = head;         // start at front of linked list (deque.head)
-    public boolean hasNext()  { return current.next != null; }
+    public boolean hasNext()  { return current != null; }
 
     public Item next()            // return content of current node & advance 'current' iter
     {
@@ -74,15 +98,35 @@ public class Deque<Item> implements Iterable<Item> {
 
   public static void main(String[] args)   // unit testing
   {
+    String test1 = "first test";
+    String test2 = "second test";
+    String test3 = "third test";
+    String test4 = "fourth test";
+    String test5 = "fifth test";
+    String test6 = "sixth test";
+
     StdOut.printf("Initiate a blank deque...");
 
-    Deque deck;
-    deck = new Deque();
+    Deque<String> deck = new Deque<String>();
 
     StdOut.println("done.");
     StdOut.printf("Size of deque is %d. (", deck.size() );
     if(!deck.isEmpty()) { StdOut.printf("not "); }
-    StdOut.println("empty.)"); 
+    StdOut.println("empty.)\n");
+
+    deck.addLast(test4);
+    deck.addLast(test5);
+    deck.addLast(test6);
+
+    deck.addFirst(test1);
+    deck.addFirst(test2);
+    deck.addFirst(test3);
+
+    StdOut.println("Contents of deque:");
+    for (String s : deck) {
+      StdOut.println(s);
+    }
+
   }
 
 }
