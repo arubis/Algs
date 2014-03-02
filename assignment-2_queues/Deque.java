@@ -29,12 +29,12 @@ public class Deque<Item> implements Iterable<Item> {
       { throw new NullPointerException("Can't add a null to deque"); 
     }
 
-    if (head != null) 
-    { 
-      StdOut.printf("Current head is %s containing '%s'. Adding '%s'...",
-        head.toString(), head.item, item); 
-    }
-    else { StdOut.printf("Current head is null; adding '%s'...", item); }
+    // if (head != null) 
+    // { 
+    //   StdOut.printf("Current head is %s containing '%s'. Adding '%s'...",
+    //     head.toString(), head.item, item); 
+    // }
+    // else { StdOut.printf("Current head is null; adding '%s'...", item); }
 
     Node oldhead = head;                // save our place
 
@@ -42,19 +42,19 @@ public class Deque<Item> implements Iterable<Item> {
     head.item = item;
     head.next = oldhead;                    // keep linked list linked in order
     if (head.next != null) { 
-      StdOut.printf("(Linking %s.prior to head(%s)",
-        head.next.toString(), head.toString());
+      // StdOut.printf("(Linking %s.prior to head(%s)",
+      //   head.next.toString(), head.toString());
       head.next.prior = head; 
     }
     if (oldhead == null) {
       tail = head; 
-      StdOut.printf("(Linking 'tail' to %s) ", tail.toString());
+      // StdOut.printf("(Linking 'tail' to %s) ", tail.toString());
     }   // if we just started from scratch, link up 'last'
 
     N++;                                  // keep track of list size
 
-    StdOut.printf("\nHead is %s (%s) and Tail is %s (%s) \n\n",
-      head.toString(), head.item, tail.toString(), tail.item);
+    // StdOut.printf("\nHead is %s (%s) and Tail is %s (%s) \n\n",
+    //   head.toString(), head.item, tail.toString(), tail.item);
   }
 
   public void addLast(Item item)          // insert the item at the end
@@ -64,12 +64,12 @@ public class Deque<Item> implements Iterable<Item> {
       throw new NullPointerException("Can't add a null to deque"); 
     }
 
-    if (tail != null)
-    { 
-      StdOut.printf("Current tail is %s containing '%s'. Adding '%s'...",
-        tail.toString(), tail.item, item); 
-    }
-    else { StdOut.printf("Current tail is null; adding '%s'...", item); }
+    // if (tail != null)
+    // { 
+    //   StdOut.printf("Current tail is %s containing '%s'. Adding '%s'...",
+    //     tail.toString(), tail.item, item); 
+    // }
+    // else { StdOut.printf("Current tail is null; adding '%s'...", item); }
 
     Node oldtail = tail;               // we'll need to link up, save our place
 
@@ -78,26 +78,26 @@ public class Deque<Item> implements Iterable<Item> {
     tail.prior = oldtail;                 // double link
 
     if (tail.prior != null) { 
-      StdOut.printf("(Linking %s.next to tail(%s)", 
-        tail.prior.toString(), tail.toString());
+      // StdOut.printf("(Linking %s.next to tail(%s)", 
+      //   tail.prior.toString(), tail.toString());
       tail.prior.next = tail; 
     }
     if (oldtail == null) 
     { 
       head = tail; 
-      StdOut.printf("(Linking 'head' to %s) ", head.toString()); 
+      // StdOut.printf("(Linking 'head' to %s) ", head.toString()); 
     }   // if we just started from scratch, link up 'head'
 
     N++;                                  // keep track of list size
 
     /* StdOut.printf("\nHead is %s (%s) and Tail is %s (%s) \n\n",
          head.toString(), head.item, tail.toString(), tail.item); */
-    StdOut.printf("\nHead is ");
-    if (head != null) 
-      { StdOut.printf("%s (%s)", head.toString(), head.item); }
-    else
-      { StdOut.printf("(null)"); }
-    StdOut.printf(" and Tail is %s (%s)", tail.toString(), tail.item);
+    // StdOut.printf("\nHead is ");
+    // if (head != null) 
+    //   { StdOut.printf("%s (%s)", head.toString(), head.item); }
+    // else
+    //   { StdOut.printf("(null)"); }
+    // StdOut.printf(" and Tail is %s (%s)", tail.toString(), tail.item);
 
   }
 
@@ -107,7 +107,7 @@ public class Deque<Item> implements Iterable<Item> {
     if (N == 0 || head == null) 
       { throw new java.util.NoSuchElementException("Queue empty"); }
 
-    StdOut.printf("dequeueing head@%s (%s)...", head.toString(), head.item);
+    // StdOut.printf("dequeueing head@%s (%s)...", head.toString(), head.item);
 
     Item item = head.item;
     head.item = null;                                  // really, don't loiter
@@ -119,10 +119,10 @@ public class Deque<Item> implements Iterable<Item> {
     // catch edge case of emptying out list (and don't loiter either):
     if (isEmpty()) tail = null;
 
-    StdOut.printf("state: N=%d, ", N);
-    if (head != null) StdOut.printf("head->%s", head.toString());
-    if (tail != null) StdOut.printf("tail->%s", tail.toString());
-    StdOut.println();
+    // StdOut.printf("state: N=%d, ", N);
+    // if (head != null) StdOut.printf("head->%s", head.toString());
+    // if (tail != null) StdOut.printf("tail->%s", tail.toString());
+    // StdOut.println();
     return item;
   }
 
@@ -133,7 +133,7 @@ public class Deque<Item> implements Iterable<Item> {
     if (N == 0 || tail == null) 
       { throw new java.util.NoSuchElementException("Stack empty"); }
 
-    StdOut.printf("popping tail@%s (%s)...", tail.toString(), tail.item);
+    // StdOut.printf("popping tail@%s (%s)...", tail.toString(), tail.item);
 
     Item item = tail.item;
     tail.item = null;                                   // really, don't loiter
@@ -144,10 +144,10 @@ public class Deque<Item> implements Iterable<Item> {
     // catch edge case of emptying out list (and don't loiter either)
     if (isEmpty()) head = null; 
 
-    StdOut.printf("state: N=%d, ", N);
-    if (head != null) StdOut.printf("head->%s", head.toString());
-    if (tail != null) StdOut.printf("tail->%s", tail.toString());
-    StdOut.println();
+    // StdOut.printf("state: N=%d, ", N);
+    // if (head != null) StdOut.printf("head->%s", head.toString());
+    // if (tail != null) StdOut.printf("tail->%s", tail.toString());
+    // StdOut.println();
     return item;
   }
 
