@@ -70,7 +70,17 @@ public class Deque<Item> implements Iterable<Item> {
 
     N++;                                  // keep track of list size
 
-    StdOut.printf("\nHead is %s (%s) and Tail is %s (%s) \n\n", head.toString(), head.item, tail.toString(), tail.item);
+    // StdOut.printf("\nHead is %s (%s) and Tail is %s (%s) \n\n", head.toString(), head.item, tail.toString(), tail.item);
+    StdOut.printf("\nHead is ");
+    if( head != null ) 
+      { StdOut.printf("%s (%s)", head.toString(), head.item); }
+    else
+      { StdOut.printf("(null)"); }
+    StdOut.printf(" and Tail is ");
+    if( tail != null ) 
+      { StdOut.printf("%s (%s)", tail.toString(), tail.item); }
+    else
+      { StdOut.printf("(null)"); }
 
   }
 
@@ -86,12 +96,13 @@ public class Deque<Item> implements Iterable<Item> {
     if( head.next != null) head.next.prior = null;     // don't loiter
     head = head.next;
 
+    N--;                        // shrink the list
     if(isEmpty()) tail = null;  // catch edge case of emptying out list (and don't loiter either)
 
-    N--;                        // shrink the list
     StdOut.printf("state: N=%d, ", N);
     if(head != null) StdOut.printf("head->%s", head.toString());
-    if(tail != null) StdOut.printf("tail->%s, ", tail.toString());
+    if(tail != null) StdOut.printf("tail->%s", tail.toString());
+    StdOut.println();
     return item;
   }
 
@@ -101,16 +112,20 @@ public class Deque<Item> implements Iterable<Item> {
     // be careful/complain if we try to remove off empty dequeue
     if ( N == 0 || tail == null ) { throw new java.util.NoSuchElementException("Stack empty"); }
 
+    StdOut.printf("popping tail@%s (%s)...", tail.toString(), tail.item);
+
     Item item = tail.item;
+    tail.item = null;                                   // really, don't loiter
     if( tail.prior != null) tail.prior.next = null;     // don't loiter
     tail = tail.prior;
 
+    N--;                        // shrink the list
     if(isEmpty()) head = null;  // catch edge case of emptying out list (and don't loiter either)
 
-    N--;                        // shrink the list
-    StdOut.printf("state: head->%s, ", head.toString());
-    StdOut.printf("tail->%s, ", tail.toString());
-    StdOut.printf("N=%d\n", N);
+    StdOut.printf("state: N=%d, ", N);
+    if(head != null) StdOut.printf("head->%s", head.toString());
+    if(tail != null) StdOut.printf("tail->%s", tail.toString());
+    StdOut.println();
     return item;
   }
   public Iterator<Item> iterator()        // return an iterator over items in order from front to end
@@ -252,8 +267,6 @@ public class Deque<Item> implements Iterable<Item> {
     for (String s : deck) {
       StdOut.println(s);
     }
-
-    
 
   }
 
