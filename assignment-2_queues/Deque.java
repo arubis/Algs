@@ -74,8 +74,45 @@ public class Deque<Item> implements Iterable<Item> {
 
   }
 
-  // public Item removeFirst()              { return ; }  // delete and return the item at the front
-  // public Item removeLast()               { return ; }  // delete and return the item at the end
+  public Item removeFirst()               // delete and return the item at the front
+  {
+    // be careful/complain if we try to remove off empty queue
+    if ( N == 0 || head == null ) { throw new java.util.NoSuchElementException("Queue empty"); }
+
+    StdOut.printf("dequeueing head@%s (%s)...", head.toString(), head.item);
+
+    Item item = head.item;
+    head.item = null;                                  // really, don't loiter
+    if( head.next != null) head.next.prior = null;     // don't loiter
+    head = head.next;
+
+    if(isEmpty()) tail = null;  // catch edge case of emptying out list (and don't loiter either)
+
+    N--;                        // shrink the list
+    StdOut.printf("state: N=%d, ", N);
+    if(head != null) StdOut.printf("head->%s", head.toString());
+    if(tail != null) StdOut.printf("tail->%s, ", tail.toString());
+    return item;
+  }
+
+
+  public Item removeLast()       // delete and return the item at the end
+  {
+    // be careful/complain if we try to remove off empty dequeue
+    if ( N == 0 || tail == null ) { throw new java.util.NoSuchElementException("Stack empty"); }
+
+    Item item = tail.item;
+    if( tail.prior != null) tail.prior.next = null;     // don't loiter
+    tail = tail.prior;
+
+    if(isEmpty()) head = null;  // catch edge case of emptying out list (and don't loiter either)
+
+    N--;                        // shrink the list
+    StdOut.printf("state: head->%s, ", head.toString());
+    StdOut.printf("tail->%s, ", tail.toString());
+    StdOut.printf("N=%d\n", N);
+    return item;
+  }
   public Iterator<Item> iterator()        // return an iterator over items in order from front to end
   { return new ForwardLLIterator(); }
 
@@ -118,14 +155,105 @@ public class Deque<Item> implements Iterable<Item> {
     deck.addLast(test5);
     deck.addLast(test6);
 
+    StdOut.printf("Size of deque is %d. (", deck.size() );
+    if(!deck.isEmpty()) { StdOut.printf("not "); }
+    StdOut.println("empty.)\n");
+
     deck.addFirst(test1);
     deck.addFirst(test2);
     deck.addFirst(test3);
+
+    StdOut.printf("Size of deque is %d. (", deck.size() );
+    if(!deck.isEmpty()) { StdOut.printf("not "); }
+    StdOut.println("empty.)\n");
 
     StdOut.println("Contents of deque:");
     for (String s : deck) {
       StdOut.println(s);
     }
+
+    StdOut.println("Now remove all elements alternately...");
+
+    StdOut.printf("dequeued %s \n", deck.removeFirst() );
+    StdOut.printf("dequeued %s \n", deck.removeFirst() );
+
+    StdOut.printf("Size of deque is %d. (", deck.size() );
+    if(!deck.isEmpty()) { StdOut.printf("not "); }
+    StdOut.println("empty.)\n");
+
+    StdOut.println("Contents of deque:");
+    for (String s : deck) {
+      StdOut.println(s);
+    }
+
+    StdOut.printf("popped %s \n", deck.removeLast() );
+    StdOut.printf("popped %s \n", deck.removeLast() );
+
+    StdOut.printf("popped %s \n", deck.removeLast() );
+    StdOut.printf("dequeued %s \n", deck.removeFirst() );
+
+    StdOut.printf("Size of deque is %d. (", deck.size() );
+    if(!deck.isEmpty()) { StdOut.printf("not "); }
+    StdOut.println("empty.)\n");
+
+    StdOut.println("Contents of deque:");
+    for (String s : deck) {
+      StdOut.println(s);
+    }
+
+    /******** DO IT AGAIN! **************/
+
+    deck.addLast(test4);
+    deck.addLast(test5);
+    deck.addLast(test6);
+
+    StdOut.printf("Size of deque is %d. (", deck.size() );
+    if(!deck.isEmpty()) { StdOut.printf("not "); }
+    StdOut.println("empty.)\n");
+
+    deck.addFirst(test1);
+    deck.addFirst(test2);
+    deck.addFirst(test3);
+
+    StdOut.printf("Size of deque is %d. (", deck.size() );
+    if(!deck.isEmpty()) { StdOut.printf("not "); }
+    StdOut.println("empty.)\n");
+
+    StdOut.println("Contents of deque:");
+    for (String s : deck) {
+      StdOut.println(s);
+    }
+
+    StdOut.println("Now remove all elements alternately...");
+
+    StdOut.printf("dequeued %s \n", deck.removeFirst() );
+    StdOut.printf("dequeued %s \n", deck.removeFirst() );
+
+    StdOut.printf("Size of deque is %d. (", deck.size() );
+    if(!deck.isEmpty()) { StdOut.printf("not "); }
+    StdOut.println("empty.)\n");
+
+    StdOut.println("Contents of deque:");
+    for (String s : deck) {
+      StdOut.println(s);
+    }
+
+    StdOut.printf("popped %s \n", deck.removeLast() );
+    StdOut.printf("popped %s \n", deck.removeLast() );
+
+    StdOut.printf("popped %s \n", deck.removeLast() );
+    StdOut.printf("dequeued %s \n", deck.removeFirst() );
+
+    StdOut.printf("Size of deque is %d. (", deck.size() );
+    if(!deck.isEmpty()) { StdOut.printf("not "); }
+    StdOut.println("empty.)\n");
+
+    StdOut.println("Contents of deque:");
+    for (String s : deck) {
+      StdOut.println(s);
+    }
+
+    
 
   }
 
