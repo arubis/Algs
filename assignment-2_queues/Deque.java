@@ -97,11 +97,7 @@ public class Deque<Item> implements Iterable<Item> {
       { StdOut.printf("%s (%s)", head.toString(), head.item); }
     else
       { StdOut.printf("(null)"); }
-    StdOut.printf(" and Tail is ");
-    if (tail != null) 
-      { StdOut.printf("%s (%s)", tail.toString(), tail.item); }
-    else
-      { StdOut.printf("(null)"); }
+    StdOut.printf(" and Tail is %s (%s)", tail.toString(), tail.item);
 
   }
 
